@@ -1,8 +1,8 @@
 # 04: Coding Quiz
 
-This project demonstrates a password generator where the user selects from the choices presented whether numeric, upper case, lower case, or special characters.  User also selects the desired length of the password, a number between 8 - 128.  
+This project demonstrates a quiz that can be used for a job applicant to determine level of knowledge.
 
-https://bussudo.github.io/passwordgenerator/
+https://bussudo.github.io/codingquiz/
 
-I chose to offer the user many of the special characters that exist from a list I created.  I also offered the alphabet, both upper case and lower case letters.  
+Level of knowledge of JavaScript is tested.  
 
