@@ -56,3 +56,6 @@ button {
   flex-direction: column;
   width: 500px;
 }
+.lastpage{
+  display:none;
+}

@@ -12,9 +12,12 @@ var quizQuestion = document.querySelector("#question");
 var quizAnswers = document.querySelector("#answers");
 var quizCorrect = document.querySelector("#ansRight");
 var quizEndEl = document.querySelector("#quizEnd");
+var submitBtn = document.querySelector("#submit");
 
 var questionsEl = document.querySelector("#question");
 var answersEl = document.querySelector("#answers");
+var initialsEl = document.querySelector("#initials");
+
 var responseEl = document.querySelector("#response");
 
 var timerInterval;
@@ -109,6 +112,8 @@ function questionClick() {
 function quizEnd() {
   clearInterval(timerId);
 
+  let lastPafeSection = document.querySelector(".lastpage");
+  lastPafeSection.style.display = "block";
   let timeRem = document.querySelector("#seconds-left");
   let timeTag = "<span>Time Left: " + counter + "</span>";
   timeRem.innerHTML = timeTag;
@@ -122,11 +127,35 @@ function quizEnd() {
   scoreEl.textContent = scoreMsg;
 }
 
+submitBtn.addEventListener("click", saveScore);
+
+function saveScore() {
+  console.log("clicked to save the high scores");
+  var initials = initialsEl.value.trim();
+  if (initials !== "") {
+    // var curScore = JSON.parse(window.localStorage.getItem("curScore")) || [];
+    score = JSON.parse(window.localStorage.getItem("score")) || [];
+
+    console.log(score);
+
+    // curScore.push(curScore);
+    // window.localStorage.setItem("curScore", JSON.stringify(curScore));
+    score.push(score);
+    window.localStorage.setItem("score", JSON.stringify(score));
+  }
+}
+
+function checkForEnter(event) {
+  // "13" is enter key
+  if (event.key === "Enter") {
+    saveScore();
+  }
+}
+
 var scoreEl = document.querySelector("score");
 
 function nextQuestion() {
   queCount++;
-  console.log("this one");
   if (queCount == queCount) {
     quizEnd();
   }
