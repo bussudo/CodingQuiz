@@ -56,6 +56,9 @@ button {
   flex-direction: column;
   width: 500px;
 }
-.lastpage{
-  display:none;
+/* .lastpage{ */
+  #lastpage {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 }

@@ -16,7 +16,7 @@
   <body>
     <div class="container">
       <header class="row"></header>
-      <a href="./highscore.html">View Highscores</a>
+      <!-- <a href="./highscore.html">View Highscores</a> -->
       <div id="timer"></div>
       <div class="col-md-3" id="score"></div>
       <section class="start-page">
@@ -39,7 +39,7 @@
       </section>
     </div>
 
-    <!--Coding questions-->
+    <!--Quiz starts-->
 
     <section id="quiz">
       <div class="row"></div>
@@ -62,17 +62,30 @@
       <!-- <div id="submit" class="col d-flex justify-content-end align-items-end"> -->
     </section>
 
-    <!-- score section -->
-    <section class="lastpage">
+    <section id="scorePage">
       <div class="row"></div>
       <div class="d-grid mx-auto"></div>
       <h3><div id="quizEnd"></div></h3>
-
       <h4><div id="score" class="row"></div></h4>
-      <label for="initials">Enter initials</label>
-      <input type="text" name="initials" maxlength="4" id="initials" />
-      <button id="submit" type="submit">Submit</button>
-      <button id="restart" type="submit">Restart Quiz</button>
+    </section>
+
+    <!-- <div class="container" class="row">
+      <h5><div class="col-md-3"></div></h5> -->
+    <section id="lastPage">
+      <div class="row"></div>
+      <div class="d-grid mx-auto"></div>
+      <P><label for="initials">Enter initials</label></P>
+      <P> <input type="text" name="initials" maxlength="4" id="initials" /></P>
+      <h4>
+        <button id="submit" class="btn btn-primary" type="submit">
+          Submit Score
+        </button>
+      </h4>
+      <h4>
+        <button id="restart" class="btn btn-primary" type="submit">
+          Restart Quiz
+        </button>
+      </h4>
     </section>
 
     <script src="./Assets/js/questions.js"></script>
